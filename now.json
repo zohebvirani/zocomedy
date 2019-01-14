@@ -1,0 +1,7 @@
+{
+  "name": "zocomedy",
+  "alias": "zocomedy.com",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
