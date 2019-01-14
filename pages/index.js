@@ -1,89 +1,53 @@
 import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
+
+import data from '~/data'
+import AboutSection from '~/components/sections/about'
+import HireSection from '~/components/sections/hire'
+import Head from '~/components/head'
+import Footer from '~/components/footer'
+import Logo from '~/components/logo2'
+import PhotoSection from '~/components/sections/photo'
+import ShowsSection from '~/components/sections/shows'
+import SubscribeSection from '~/components/sections/subscribe'
+import Navbar from '~/components/nav/navbar'
+import NavMenu from '~/components/nav/nav_menu'
 
 const Home = () => (
-  <div>
-    <Head title="Home" />
-    <Nav />
-
-    <div className="hero">
-      <h1 className="title">Welcome to Next!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className="row">
-        <Link href="https://github.com/zeit/next.js#getting-started">
-          <a className="card">
-            <h3>Getting Started &rarr;</h3>
-            <p>Learn more about Next on Github and in their examples</p>
-          </a>
-        </Link>
-        <Link href="https://open.segment.com/create-next-app">
-          <a className="card">
-            <h3>Examples &rarr;</h3>
-            <p>
-              Find other example boilerplates on the{' '}
-              <code>create-next-app</code> site
-            </p>
-          </a>
-        </Link>
-        <Link href="https://github.com/segmentio/create-next-app">
-          <a className="card">
-            <h3>Create Next App &rarr;</h3>
-            <p>Was this tool helpful? Let us know how we can improve it</p>
-          </a>
-        </Link>
+  <div id="home" className="page">
+    <Head title="Zoheb Virani - Comedian - San Francisco" />
+    <Navbar />
+    <PhotoSection>
+      <div className="responsive-padding">
+        <Logo>Zoheb Virani</Logo>
+        <NavMenu className="hero-menu" />
       </div>
-    </div>
-
+    </PhotoSection>
+    <AboutSection className="dark" />
+    <ShowsSection shows={data.shows} />
+    <HireSection className="dark" />
+    <SubscribeSection />
+    <Footer />
+    <style jsx global>{`
+      body {
+        font-family: Helevetica Neue, sans-serif;
+      }
+    `}</style>
     <style jsx>{`
-      .hero {
+      .page {
         width: 100%;
-        color: #333;
-      }
-      .title {
-        margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
-      }
-      .title,
-      .description {
+        text-align: center;
         text-align: center;
       }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+      .responsive-padding {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
       }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
-        text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
-      }
-      .card:hover {
-        border-color: #067df7;
-      }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
-      }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
-      }
+      @media screen and (max-width: 1340px) {
+        .responsive-padding {
+          padding-top: 500px;
+        }
+      )
     `}</style>
   </div>
 )
