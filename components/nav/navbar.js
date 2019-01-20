@@ -25,7 +25,7 @@ class Navbar extends PureComponent {
   }
 
   _handleOnScroll = () => {
-    const scrollTop = document.documentElement.scrollTop
+    const scrollTop = document.body.scrollTop
     this._$logo = this._$logo || document.getElementById('logo')
     const show = scrollTop > this._$logo.offsetTop + 75
     this.setState({ hide: !show })
