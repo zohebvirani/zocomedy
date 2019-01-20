@@ -26,9 +26,11 @@ const ShowRow = ({ show }) => (
         margin: 25px 30px;
       }
       .title {
+        white-space: nowrap;
         font-size: 2rem;
       }
       .content {
+        white-space: nowrap;
         flex: 1;
         padding: 10px 20px;
       }
@@ -39,6 +41,28 @@ const ShowRow = ({ show }) => (
       .location {
         white-space: nowrap;
         font-size: 1.5rem;
+      }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        .title {
+          font-size: 1rem;
+        }
+        .date {
+          font-size: 0.75rem;
+        }
+        .location {
+          font-size: 0.75rem;
+        }
+      }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 576px) {
+        .title {
+          font-size: 2rem;
+        }
+        .date {
+          font-size: 1.5rem;
+        }
+        .location {
+          font-size: 1.5rem;
+        }
       }
     `}</style>
   </div>

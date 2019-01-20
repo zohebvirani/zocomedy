@@ -16,7 +16,7 @@ const Nav = () => (
       <span className="navbar-toggler-icon" />
     </button>
     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <NavMenu />
+      <NavMenu className="navbarnavbar" />
     </div>
   </Fragment>
 )
