@@ -18,6 +18,16 @@ const ShowsList = ({ shows }) => (
         border-radius: 10px;
         box-shadow: inset 0 -10px 30px -10px #999;
       }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        .show-list {
+          height: 250px;
+        }
+      }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 576px) {
+        .show-list {
+          height: 450px;
+        }
+      }
       .no-shows {
         display: flex;
         justify-content: center;

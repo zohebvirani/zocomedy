@@ -6,7 +6,7 @@ const Section = ({ children, className, id }) => (
     <style jsx>{`
       .section {
         text-align: left;
-        padding-bottom: 50px;
+        padding: 4vw 0 5vw 0;
       }
       .nopad {
         padding: 0;

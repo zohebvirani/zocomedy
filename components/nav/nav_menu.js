@@ -10,8 +10,8 @@ const NavMenu = ({ className }) => (
     <NavItem href="#shows" className={className}>
       Shows
     </NavItem>
-    <NavItem href="#book-hire" className={className}>
-      Book / Hire
+    <NavItem href="#book" className={className}>
+      Book
     </NavItem>
     <NavItem href="#subscribe" className={className}>
       Subscribe
@@ -20,9 +20,6 @@ const NavMenu = ({ className }) => (
       .hero-menu {
         display: flex;
         flex-direction: row;
-        text-shadow: 0 4px 1px #323232, 3px 0 1px #323232, 2px 4px #ccc,
-          2px 5px 1px #aaa;
-        font-weight: bold;
       }
     `}</style>
   </ul>

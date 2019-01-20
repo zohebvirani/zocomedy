@@ -1,12 +1,12 @@
 import cx from 'classnames'
 
-import data from '~/data'
+import Container from '~/components/container'
 import Section from './section'
 import Subtitle from '~/components/subtitle'
 
 const ContactSection = ({ className, shows }) => (
   <Section id="subscribe" className={cx('subscribe', className)}>
-    <div className="container">
+    <Container>
       <Subtitle className={className}>Subscribe</Subtitle>
       <div id="subscribe-form">
         <form
@@ -14,40 +14,36 @@ const ContactSection = ({ className, shows }) => (
           method="post"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
-          class="validate"
+          className="validate"
           target="_blank"
-          novalidate
+          noValidate
         >
-          <div id="mc_embed_signup_scroll">
+          <div className="form-group">
+            <label htmlFor="mce-EMAIL">
+              Subscribe to my mailing list to hear about shows
+            </label>
             <input
               type="email"
-              value=""
               name="EMAIL"
-              className="email"
+              className="email form-control"
               id="mce-EMAIL"
               placeholder="email address"
               required
             />
-            <div className="hide" aria-hidden="true">
-              <input
-                type="text"
-                name="b_b72dd82d16df672f295546070_22e2a25d59"
-                tabindex="-1"
-                value=""
-              />
-            </div>
-            <div className="clear">
-              <input
-                type="submit"
-                value="Subscribe"
-                name="subscribe"
-                className="button"
-              />
-            </div>
           </div>
+          <div className="hide" aria-hidden="true">
+            <input
+              type="text"
+              name="b_b72dd82d16df672f295546070_22e2a25d59"
+              tabIndex="-1"
+            />
+          </div>
+          <button type="submit" name="subscribe" className="btn btn-primary">
+            Subscribe
+          </button>
         </form>
       </div>
-    </div>
+    </Container>
     <style jsx global>{`
       .hide {
         display: none;
@@ -64,40 +60,46 @@ const ContactSection = ({ className, shows }) => (
         align-items: center !important;
         justify-content: flex-start !important;
       }
-      .subscribe-form label {
-        font-size: 36px !important;
+      label {
+        font-size: 32px;
       }
-      .subscribe-form input[type='email'] {
-        font-size: 50px !important;
-        width: 550px !important;
+      input[type='email'] {
+        max-width: 550px;
+        width: 90vw !important;
       }
-      .subscribe-form input[type='submit'] {
-        font-size: 24px !important;
-        padding: 5px !important;
+      @media only screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 1px) {
+        input,
+        button {
+          font-size: 32px !important;
+        }
+        label {
+          font-size: 32px !important;
+        }
+      }
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1px) {
+        input,
+        button {
+          font-size: 18px !important;
+        }
+        label {
+          font-size: 18px !important;
+        }
+      }
+      @media only screen and (-webkit-min-device-pixel-ratio: 1) and (min-width: 576px),
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 576px) {
+        input,
+        button {
+          font-size: 32px !important;
+        }
+        input {
+          padding: 30px 15px !important;
+        }
+        label {
+          font-size: 32px !important;
+        }
       }
     `}</style>
   </Section>
 )
 
 export default ContactSection
-
-function getMailCode() {
-  return `
-<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://zocomedy.us7.list-manage.com/subscribe/post?u=b72dd82d16df672f295546070&amp;id=22e2a25d59" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b72dd82d16df672f295546070_22e2a25d59" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-  `
-}

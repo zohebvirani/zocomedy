@@ -1,13 +1,15 @@
-import Section from './section'
+import Container from '~/components/container'
 import MailTo from '~/components/mail_to'
+import Paragraph from '~/components/paragraph'
+import Section from './section'
 import Subtitle from '~/components/subtitle'
 
 const About = ({ className }) => (
   <Section id="about" className={className}>
-    <div className="container">
+    <Container>
       <div className="about-text">
         <Subtitle className={className}>About</Subtitle>
-        <p>
+        <Paragraph className={className}>
           Zoheb Virani is a comic based in San Francisco. Zoheb was raised in
           the South, between Texas, South Carolina and Georgia and hails zero
           southern drawl. He’s American born and his parents are from Pakistan
@@ -31,21 +33,14 @@ const About = ({ className }) => (
           San Francisco. He’s also acted in local plays and had parts in small
           film productions. Reach out to him @{' '}
           <MailTo>zohebcomedy@gmail.com</MailTo>.
-        </p>
+        </Paragraph>
       </div>
       <style jsx>{`
         .container {
           text-align: left;
         }
-        .about-text {
-          color: white;
-          font-size: 2rem;
-        }
-        p {
-          margin: 0;
-        }
       `}</style>
-    </div>
+    </Container>
   </Section>
 )
 
