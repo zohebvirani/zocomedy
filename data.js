@@ -11,7 +11,14 @@ const data = {
       date: '1/16/2019',
       time: '21:00', // military time
       location: 'StageWerx'
-    }
+    },
+    {
+      title: 'Some New Show',
+      date: '2/16/2019',
+      time: '22:00', // military time
+      location: 'Mars'
+    },
+    
   ]
 }
 
