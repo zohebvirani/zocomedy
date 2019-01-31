@@ -20,14 +20,14 @@ const data = {
     },
     {
       title: 'Zipper Dipper in Divination Intervention - Improv ',
-      date: '2/6/2019',
+      date: '2/8/2019',
       time: '19:30', // military time
       location: 'ETC South'
     },    
     {
       title: 'Zo @ The Set Up ',
-      date: '2/6/2019',
-      time: '19:30', // military time
+      date: '2/13/2019',
+      time: '20:00', // military time
       location: 'ETC South'
     },
     {
