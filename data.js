@@ -43,7 +43,7 @@ const data = {
       location: 'ETC South'
    */ },
     {
-      title: 'Drifstone @ Harold Night',
+      title: 'Drifstone @ Harold Night #2',
       date: '2/27/2019',
       time: '21:00', // military time
       location: 'Stage Werx Theatre'
