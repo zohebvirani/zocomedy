@@ -6,42 +6,42 @@ const data = {
     //   time: '12:00', // military time
     //   location: 'StageWorks'
     // },
-   /* {
-      title: 'Zo @ Bar Fluxus',
-      date: '2/2/2019',
-      time: '19:00', // military time
-      location: 'Bar Fluxus'
-    },
-    {
-      title: 'Drifstone @ Harold Night',
-      date: '2/6/2019',
-      time: '21:00', // military time
-      location: 'Stage Werx Theatre'
-    },
-    {
-      title: 'Zipper Dipper in Divination Intervention - Improv ',
-      date: '2/6/2019',
-      time: '19:30', // military time
-      location: 'ETC South'
-    },    
-    {
-      title: 'Zo @ The Set Up ',
-      date: '2/6/2019',
-      time: '19:30', // military time
-      location: 'ETC South'
-    },
-    {
-      title: 'Drifstone @ Harold Night',
-      date: '2/20/2019',
-      time: '21:00', // military time
-      location: 'Stage Werx Theatre'
-    },
-    {
-      title: 'Zipper Dipper in Divination Intervention - Improv ',
-      date: '2/22/2019',
-      time: '19:30', // military time
-      location: 'ETC South'
-   */ },
+    // {
+    //   title: 'Zo @ Bar Fluxus',
+    //   date: '2/2/2019',
+    //   time: '19:00', // military time
+    //   location: 'Bar Fluxus'
+    // },
+    // {
+    //   title: 'Drifstone @ Harold Night',
+    //   date: '2/6/2019',
+    //   time: '21:00', // military time
+    //   location: 'Stage Werx Theatre'
+    // },
+    // {
+    //   title: 'Zipper Dipper in Divination Intervention - Improv ',
+    //   date: '2/6/2019',
+    //   time: '19:30', // military time
+    //   location: 'ETC South'
+    // },    
+    // {
+    //   title: 'Zo @ The Set Up ',
+    //   date: '2/6/2019',
+    //   time: '19:30', // military time
+    //   location: 'ETC South'
+    // },
+    // {
+    //   title: 'Drifstone @ Harold Night',
+    //   date: '2/20/2019',
+    //   time: '21:00', // military time
+    //   location: 'Stage Werx Theatre'
+    // },
+    // {
+    //   title: 'Zipper Dipper in Divination Intervention - Improv ',
+    //   date: '2/22/2019',
+    //   time: '19:30', // military time
+    //   location: 'ETC South'
+    // },
     {
       title: 'Drifstone @ Harold Night #2',
       date: '2/27/2019',
@@ -117,11 +117,3 @@ const data = {
     
   ]
 }
-
-// data parsing...
-data.shows = data.shows.map(show => ({
-  ...show,
-  date: new Date(`${show.date} ${show.time} PST`)
-}))
-
-module.exports = data
