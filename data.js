@@ -41,7 +41,7 @@ const data = {
       date: '2/22/2019',
       time: '19:30', // military time
       location: 'ETC South'
-   */ },
+    }, */
     {
       title: 'Drifstone @ Harold Night',
       date: '2/27/2019',
